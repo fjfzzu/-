@@ -1,0 +1,54 @@
+%% 温度
+Tem = 250:25:350;
+Tem1 = [250 275 300 325 350 400 450];
+Tem2 = [250 275 300 325 350 400];
+%% 数据
+Ethanol_conversion = [2.07 	5.85 	14.97 	19.68 	36.80 ];
+C4_olefin_selectivity = [34.05	37.43	46.94	49.7	47.21];
+Ethanol_conversion1 = [4.60 	17.20 	38.92 	56.38 	67.88 ];
+C4_olefin_selectivity1 = [18.07	17.28	19.6	30.62	39.1];
+Ethanol_conversion12 = [9.7 	19.2 	29.3 	37.6 	48.9 	83.7 	86.4 ];
+C4_olefin_selectivity2 = [5.5	8.04	17.01	28.72	36.85	53.43	49.9];
+Ethanol_conversion3 = [4.0 	12.1 	29.5 	43.3 	60.5 	88.4 ];
+C4_olefin_selectivity3 = [9.62	8.62	10.72	18.89	27.25	41.02];
+%% 画图
+% 图1
+subplot(2,2,1)
+plot(Tem,Ethanol_conversion,'-*b',Tem,C4_olefin_selectivity,'-or'); %线性，颜色，标记
+title('A1催化剂组合');
+axis( [250,350,0,100])  %确定x轴与y轴框图大小
+set(gca,'XTick',[250:25:350]) %x轴范围
+set(gca,'YTick',[0:10:100]) %y轴范围
+legend('Ethanol','C4 olefin','Location','NorthWest', 'FontName','Times New Roman','FontSize',8,'FontWeight','normal');   %右下角标注
+xlabel('Temperture', 'FontName','Times New Roman','FontSize',11,'FontWeight','normal')  %x轴坐标描述
+ylabel('Percentage (%)', 'FontName','Times New Roman','FontSize',11,'FontWeight','normal') %y轴坐标描述
+% 图2
+subplot(2,2,2)
+plot(Tem,Ethanol_conversion1,'-*b',Tem,C4_olefin_selectivity1,'-or'); %线性，颜色，标记
+title('A2催化剂组合');
+axis( [250,350,0,100])  %确定x轴与y轴框图大小
+set(gca,'XTick',[250:25:350]) %x轴范围
+set(gca,'YTick',[0:10:100]) %y轴范围
+legend('Ethanol','C4 olefin','Location','NorthWest', 'FontName','Times New Roman','FontSize',8,'FontWeight','normal');   %右下角标注
+xlabel('Temperture', 'FontName','Times New Roman','FontSize',11,'FontWeight','normal')  %x轴坐标描述
+ylabel('Percentage (%)', 'FontName','Times New Roman','FontSize',11,'FontWeight','normal') %y轴坐标描述
+% 图3
+subplot(2,2,3)
+plot(Tem1,Ethanol_conversion12,'-*b',Tem1,C4_olefin_selectivity2,'-or'); %线性，颜色，标记
+title('A3催化剂组合');
+axis( [250,450,0,100])  %确定x轴与y轴框图大小
+set(gca,'XTick',[250:25:450]) %x轴范围
+set(gca,'YTick',[0:10:100]) %y轴范围
+legend('Ethanol','C4 olefin','Location','NorthWest', 'FontName','Times New Roman','FontSize',8,'FontWeight','normal');   %右下角标注
+xlabel('Temperture', 'FontName','Times New Roman','FontSize',11,'FontWeight','normal')  %x轴坐标描述
+ylabel('Percentage (%)', 'FontName','Times New Roman','FontSize',11,'FontWeight','normal') %y轴坐标描述
+% 图4
+subplot(2,2,4)
+plot(Tem2,Ethanol_conversion3,'-*b',Tem2,C4_olefin_selectivity3,'-or'); %线性，颜色，标记
+title('A4催化剂组合');
+axis( [250,400,0,100])  %确定x轴与y轴框图大小
+set(gca,'XTick',[250:25:400]) %x轴范围
+set(gca,'YTick',[0:10:100]) %y轴范围
+legend('Ethanol','C4 olefin','Location','NorthWest', 'FontName','Times New Roman','FontSize',8,'FontWeight','normal');   %右下角标注
+xlabel('Temperture', 'FontName','Times New Roman','FontSize',11,'FontWeight','normal')  %x轴坐标描述
+ylabel('Percentage (%)', 'FontName','Times New Roman','FontSize',11,'FontWeight','normal') %y轴坐标描述
